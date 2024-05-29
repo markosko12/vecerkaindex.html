@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U večerky</title>  <!--Název webu-->
+<link rel="stylesheet" href="/style22.css"> <!--Propojení s css-->
+</head>
+<body>
+    <header>
+        <h1>Prodej všeho zboží z naší večerky</h1> <!--Text v hlavičce Př. Prodej medu u nás-->
+           <img src="/filip_dang_večerka-removebg-preview.png" alt="" style="width: 100px; height: 100px;"> <!-- Malý obrázek který mužes dát za ten text ale nemusíš / pozice dá se říct obrázrk dáš za /-->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">O nás</a></li> <!-- Prostě sekce jak se budou jmenovat/ to klidně nech-->
+            <li><a href="#products">Produkty</a></li>
+            <li><a href="#contact">Kontakt = Večerky.SRO</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+    </section>
+    <div class="text"> 
+        <h2>O nás</h2> <!-- Text sekce O nás zase nech být -->
+        <h4>Nejlepší večerka.SRO 10/10</h4> <!-- Jsem napíseš krýtký text o čem cheš Př. nejlepší med jenom od nás, může to být delší -->
+        <h2>Nejkvalitnejší zboží ze všech večerek </h2><img src="/nedle-removebg-preview.png" alt="" style="width: 90px; height: 50px;"> <!--Pod text / Př, co u nás najdete -->
+    </div>
+    <section id="products">
+        <div class="product">
+            <img src="/rohlik-removebg-preview.png" alt="ROHLÍk" onclick="enlargeImage(this, '2 Kč')"><!--Zase to propojíš za tečkou . napíseš / a jmeno toho obrazku jak se jmenuje + cena změna třeba-->
+            <h3></h3>
+            <p>ROHLÍK</p> <!-- Název produktu -->
+        </div>
+        <div class="product">
+            <img src="" alt="" onclick="enlargeImage(this, '300 Kč za 1 gram ')"> <!--Zase to propojíš za tečkou . napíseš / a jmeno toho obrazku jak se jmenuje + cena změna třeba-->
+            <h3></h3>
+            <p></p> <!-- Název produktu -->
+        </div>
+        <div class="product">
+            <img src="/pitičko-removebg-preview.png" alt="F 1 PITÍČKO" onclick="enlargeImage(this, '250 Kč')"> <!--Zase to propojíš za tečkou . napíseš / a jmeno toho obrazku jak se jmenuje + cena změna třeba-->
+            <h3></h3>
+            <p>F 1 PITÍČKO</p> <!-- Název produktu -->
+        </div>
+        <div class="product">
+            <img src="/klabice-removebg-preview (1).png" alt=" " onclick="enlargeImage(this, '300 Kč')"> <!--Zase to propojíš za tečkou . napíseš / a jmeno toho obrazku jak se jmenuje + cena změna třeba-->
+            <h3></h3>
+            <p>MYSTERY BOX</p> <!-- Název produktu -->
+        </div>
+        <div class="product">
+            <img src="/tycinka-removebg-preview.webp" alt="KINDER BUENO BÍLÉ" onclick="enlargeImage(this, '24 Kč')"> <!--Zase to propojíš za tečkou . napíseš / a jmeno toho obrazku jak se jmenuje + cena změna třeba-->
+            <h3></h3>
+            <p>KINDER BUENO BÍLÉ</p> <!-- Název produktu -->
+        </div>
+        <div class="product">
+            <img src="/kravík-removebg-preview.png" alt=" " onclick="enlargeImage(this, '19 Kč')"> <!--Zase to propojíš za tečkou . napíseš / a jmeno toho obrazku jak se jmenuje + cena změna třeba-->
+            <h3></h3>
+            <p>KRAVÍK</p> <!-- Název produktu -->
+        
+    </section>
+
+    <script>
+        function enlargeImage(img, cena) {
+            img.style.transform = "scale(1.1)";
+            img.nextElementSibling.style.color = "green"; // zde zmeěníš barvu ceny anglicky, Příklad yellow bude to žluté
+            img.nextElementSibling.innerHTML = "Cena: " + cena + " za kus";  // text co to bude psát u všech obrázku zmeěníš pouze červený text     cena    za sklenici text muzes zmenit jak ches treba cena   od conga idk
+        }
+    </script>
+    
+    <section id="contact">
+        <h2>Kontakt</h2> <!-- sekce kontakt nechat -->
+    </section>
+    <div class="text"> 
+        <h4>Pro objednavku napište na večerky.SRO</h4> <!-- Zde dáš nejakej text třeba pro velkou objdednavku napište na blablb -->
+        <h4>Pokud vám nejde objednávka napište na večerky.SRO</h4> <!--Pod text nemusíš ale mužes sem dat treba nebo zavolejte na blablabla nebo vymyslis uplne neco random ne ne psy nepapat, to samy muzes udelat aj nad tímhle -->
+    </div>
+
+    <footer>
+        <p>Děkuju za návštěvu a vraťe se brzi spět </p> <!-- Tohle je patička zde napíseš text který bude úplne dole stránky / nemusíš -->
+    </footer>
+
+    <style>
+        /* Styl pro létajícího čonga */ /* tady muzes udelat letaciho conga ALE NEMUSIS  mas tu upresneno co co dela ale moc na to nesahej :D */ 
+        #bee {
+            position: absolute;
+            top: 50%;
+            left: -50px; /* Startuje mimo obrazovku vlevo */
+            width: 100px; /* Změňte šířku obrázku podle potřeby */
+            height: auto; /* Automaticky upravuje výšku podle šířky */
+            transition: transform 3s linear; /* Délka letu přes obrazovku */
+        }
+    </style>
+
+    <img id="bee" src="/filip_dang_večerka-removebg-preview.png" alt="Čong">  <!-- Zde propojíš obrazek conga /jmeno obrazku --> 
+    <audio id="beeSound" src="/bandicam_2024-05-28_17-25-35-252.mp3"></audio>
+
+    <script> /* tady moc nesahej ani nevim jestli to bude fungovat XD */ 
+        // Funkce pro simulaci letu čonga
+        function flyBee() {
+            // Získejte včelku podle ID
+            var bee = document.getElementById('bee');
+            var beeSound = document.getElementById('beeSound');
+
+            // Nastavte animaci letu přes obrazovku
+            bee.style.transform = 'translateX(100vw)'; /* Létá zleva doprava přes celou obrazovku */
+            beeSound.play(); // Play the audio
+
+            // Resetujte pozici čonga, když dokončí let
+            setTimeout(function () {
+                bee.style.transform = 'translateX(0)'; /* Vrátí se na začátek */
+            }, 3000); /* Délka letu 3 sekundy (změňte podle potřeby) */
+        }
+
+        // Spusťte let čonga každých 12 sekund
+        setInterval(flyBee, 12000);
+    </script>
+    
+</body>
+</html>
